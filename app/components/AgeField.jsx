@@ -12,8 +12,8 @@ class AgeField extends React.Component {
   }
   onChange(e) {
     const val = e.target.value;
-    const valid = this.validateAge(val);
-    this.setState({age: val, ageValid: valid});
+    const isValid = this.validate(val);
+    this.setState({value: val, valid: isValid});
   }
   render() {
       const color = (this.state.valid === true) ? 'green' : 'red';

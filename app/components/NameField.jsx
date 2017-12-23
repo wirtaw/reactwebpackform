@@ -12,9 +12,8 @@ class NameField extends React.Component {
   }
   onChange(e) {
     const val = e.target.value;
-    console.log(val);
-    const valid = this.validateName(val);
-    this.setState({name: val, nameValid: valid});
+    const isValid = this.validate(val);
+    this.setState({value: val, valid: isValid});
   }
   render() {
     const color = (this.state.valid === true) ? 'green' : 'red';

@@ -11,8 +11,8 @@ class UserForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const name = this.refs.nameField.value; //this.refs.nameField.value;
-    const age = this.refs.ageField.value; //this.refs.ageField.value;
+    const name = this.refs.nameField.state.value;
+    const age = this.refs.ageField.state.value;
     if(this.refs.nameField.state.valid && this.refs.ageField.state.valid) {
       alert("Имя: " + name + " Возраст: " + age);
     }
